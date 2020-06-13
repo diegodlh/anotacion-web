@@ -1,6 +1,7 @@
 ---
+title: 'Anotación web con Hypothesis: primeros pasos'
+date: 2020-06-13 00:00:00 Z
 layout: post
-title: "Anotación web con Hypothesis: primeros pasos"
 author: Diego de la Hera
 ---
 
