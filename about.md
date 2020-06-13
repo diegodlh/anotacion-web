@@ -1,15 +1,7 @@
 ---
 layout: page
-title: About
+title: Acerca de
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+Este blog es mantenido por [Diego de la Hera](https://diegodlh.conversodromo.com.ar/).
