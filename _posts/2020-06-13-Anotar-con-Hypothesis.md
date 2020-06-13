@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Anotación web con Hypothesis: primeros pasos
+title: "Anotación web con Hypothesis: primeros pasos"
+author: Diego de la Hera
 ---
 
 Seguí los pasos 1 a 6 a continuación para anotar la web con [Hypothesis](https://web.hypothes.is/).
@@ -13,9 +14,17 @@ Seguí los pasos 1 a 6 a continuación para anotar la web con [Hypothesis](https
 
 ![captura de la barra lateral, pasos básicos y traducciones]({{ site.baseurl }}/images/barra_lateral.png)
 
+{:start="0"}
+0. Antes de empezar, asegurate de estar anotando en el grupo de anotación correcto.
 1. Seleccioná la parte del texto que querés anotar.
 2. Elegí Anotar o Resaltar.
-3. Si elegiste Anotar, escribí el contenido de tu anotación acá.
+
+Si elegiste Resaltar, ¡listo!. Si elegiste Anotar, seguí:
+
+{:start="3"}
+3. Escribí el contenido de tu anotación acá.
 4. Podés usar la barra de formato para dar formato a tu texto.
 5. Si querés, agregá etiquetas para clasificar tus anotaciones. Insertá una coma o presioná Enter a continuación de cada etiqueta.
-6. Finalmente pulsá Post para publicar tu anotación. Usá el menú desplegable para elegir entre publicar en el grupo actual (en este caso Post to Public) o publicar en forma privada sólo para vos (Post to Only me).
+6. Finalmente pulsá Post para publicar tu anotación. Usá el menú desplegable para elegir entre:
+* publicar para el grupo actual (en este caso Post to Public), o
+* publicar de forma privada sólo para vos (Post to Only me).
