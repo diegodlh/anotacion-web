@@ -1,6 +1,6 @@
 ---
 title: 2020 06 13 Anotar Con Hypothesis
-date: 2020-06-13 05:10:08 Z
+date: 2020-06-13 05:10:08.530000000 Z
 ---
 
 Seguí los pasos 1 a 6 a continuación para anotar la web con [Hypothesis](https://web.hypothes.is/).
