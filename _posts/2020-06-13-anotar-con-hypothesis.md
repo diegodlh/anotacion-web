@@ -28,3 +28,5 @@ Si elegiste Resaltar, ¡listo!. Si elegiste Anotar, seguí:
 6. Finalmente pulsá Post para publicar tu anotación. Usá el menú desplegable para elegir entre:
 * publicar para el grupo actual (en este caso Post to Public), o
 * publicar de forma privada sólo para vos (Post to Only me).
+
+(*) Las opciones Cambiar grupo, Compartir, Ajustes de cuenta y Cerrar sesión no están disponibles en la versión de Hypothesis para campus virtuales.
