@@ -2,7 +2,7 @@
 layout: post
 title: "Consejos de anotación para estudiantes"
 author: Diego de la Hera
-published: false
+published: true
 ---
 
 Traducido y adaptado del [original](https://web.hypothes.is/annotation-tips-for-students/) en inglés, con la colaboración de [Rocío de la Hera](https://buenasnochesaureliano.blogspot.com/)
@@ -21,7 +21,7 @@ Primero, querrás enfocarte en los pasajes más intrigantes o ambiguos de un tex
 Segundo, seleccioná una porción discreta pero completa de texto para tu análisis.
 
 ![]({{ site.baseurl }}/images/consejos-para-estudiantes/ellos-van.png)<br>
-*Parece poco probable que de esas palabras solas pueda surgir una anotación interesante.... Fragmento de "La Cautiva", de Esteban Echeverría.*
+*Parece poco probable que de esas palabras solas pueda surgir una anotación interesante.... Fragmento de ["La Cautiva", de Esteban Echeverría](https://es.wikipedia.org/wiki/La_cautiva_(poema)).*
 
 Incluso dentro de un pasaje evidentemente rico en significado, querrás elegir palabras o frases específicas para analizarlas. Pensá en tu anotación como a cargo del texto que seleccionaste. Seleccioná sólo la parte acerca de la que realmente querés hablar en tu anotación. Pero también asegurate de resaltar suficiente texto para que haya suficiente para decir. En algunas situaciones, podría tratarse de una sola palabra. Más a menudo es una línea o dos de poesía, o una oración o frase de un ensayo. Generalmente no querrás seleccionar estrofas o párrafos enteros: la unidad de análisis debería ser más focalizada.
 
