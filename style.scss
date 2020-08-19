@@ -110,6 +110,16 @@ img {
   max-width: 100%;
 }
 
+figure.centered {
+  text-align: center;
+}
+
+figure.framed {
+  img {
+    border: 1px solid lightgray;
+  }
+}
+
 // Fixes images in popup boxes from Google Translate
 .gmnoprint img {
   max-width: none;
