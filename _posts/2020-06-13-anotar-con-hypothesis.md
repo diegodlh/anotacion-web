@@ -6,12 +6,6 @@ author: Diego de la Hera
 
 Seguí los pasos 1 a 6 a continuación para anotar la web con [Hypothesis](https://web.hypothes.is/).
 
->Este instructivo supone que ya tenés Hypothesis activado en la página que estás visitando, ya sea porque:
->* lo activaste desde tu extensión para [Chrome](https://chrome.google.com/webstore/detail/hypothesis-web-pdf-annota/bjfhmglciegochdpefhhlphglcehbmek) o para [Firefox (no oficial)](https://github.com/diegodlh/unofficial-hypothesis-extension),
->* usaste el [bookmarklet](https://web.hypothes.is/help/installing-the-bookmarklet/),
->* accediste a la página a través del [proxy Via](https://via.hypothes.is/), o
->* ingresaste desde tu [campus virtual](https://web.hypothes.is/education/lms/).
-
 ![captura de la barra lateral, pasos básicos y traducciones]({{ site.baseurl }}/images/barra_lateral.png)
 
 {:start="0"}
@@ -30,3 +24,10 @@ Si elegiste Resaltar, ¡listo!. Si elegiste Anotar, seguí:
 * publicar de forma privada sólo para vos (Post to Only me).
 
 (*) Las opciones Cambiar grupo, Compartir, Ajustes de cuenta y Cerrar sesión no están disponibles en la versión de Hypothesis para campus virtuales.
+
+>Este instructivo supone que ya tenés Hypothesis activado en la página que estás visitando, ya sea porque:
+>* lo activaste desde tu extensión para [Chrome](https://chrome.google.com/webstore/detail/hypothesis-web-pdf-annota/bjfhmglciegochdpefhhlphglcehbmek) o para [Firefox (no oficial)](https://github.com/diegodlh/unofficial-hypothesis-extension),
+>* usaste el [bookmarklet](https://web.hypothes.is/help/installing-the-bookmarklet/),
+>* accediste a la página a través del [proxy Via](https://via.hypothes.is/), o
+>* ingresaste desde tu [campus virtual](https://web.hypothes.is/education/lms/).
+{: style="font-size: medium"}
