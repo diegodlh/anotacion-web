@@ -236,18 +236,35 @@ que tus alumnxs anoten en un grupo equivocado por error, pero no es necesario.
 	</p>
 </form>
 <script>
-	const generate = (event) => {
-		event.preventDefault();
-		const url = event.target.form.querySelector('#url');
-		if (url.value) {
-			let annotable = 'https://hyp.is/go?';
-			annotable += 'url=' + encodeURIComponent(event.target.form.querySelector('#url').value);
-			const group = event.target.form.querySelector('#group');
+	const via = (url, group) => {
+		// using via
+		let annotable = 'https://via.hypothes.is/';
+			annotable += url.value;
+			if (group.value && group.validity.valid) {
+				const groupid = group.value.split('/')[4];
+				annotable += '#annotations:group:' + groupid;
+			}
+		return annotable
+	}
+	const bouncer = (url, group) => {
+		// using bouncer
+		let annotable = 'https://hyp.is/go?';
+			annotable += 'url=' + encodeURIComponent(url.value);
 			if (group.value && group.validity.valid) {
 				const groupid = group.value.split('/')[4];
 				annotable += '&group=' + groupid;
 			}
-			event.target.form.querySelector('#annotable').value = annotable
+		return annotable
+	}
+	const generate = (event) => {
+		event.preventDefault();
+		const url = event.target.form.querySelector('#url');
+		if (url.value) {
+			const group = event.target.form.querySelector('#group');
+			// using via
+			event.target.form.querySelector('#annotable').value = via(url, group)
+			// // using bouncer
+			// event.target.form.querySelector('#annotable').value = bouncer(url, group)
 		} else {
 			event.target.form.querySelector('#annotable').value = ''
 		}
@@ -256,6 +273,9 @@ que tus alumnxs anoten en un grupo equivocado por error, pero no es necesario.
 
 {:start="5"}
 5. Copiá el enlace a la versión anotable que acabás de obtener, y enviala a tus alumnxs.
+*Nota: el formulario usa JavaScript. Si tenés problemas para obtener el enlace, podés
+obtener uno similar copiando la URL del documento que elegiste
+<a href="https://via.hypothes.is/" target="_blank">acá</a>.*
 
 ¡Listo! ¡Ya pueden empezar a anotar la web colaborativamente!
 
