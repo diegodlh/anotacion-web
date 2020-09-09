@@ -14,8 +14,7 @@ tags: educación, hypothesis,
 	- [2. Creá un grupo para tu clase](#2-creá-un-grupo-para-tu-clase)
 	- [3. Elegí algo para anotar](#3-elegí-algo-para-anotar)
 	- [4. Anotá con tus alumos](#4-anotá-con-tus-alumnos)
-		- [4.1 Sin instalar nada](#41-sin-instalar-nada)
-		- [4.2 Instalando la extensión](#42-instalando-la-extensión)
+		- [4.1 Yapa](#41-yapa)
 
 ## Introducción
 
@@ -111,7 +110,7 @@ buscarlo en la carpeta de spam a ver si llegó ahí.
 ### 2. Creá un grupo para tu clase
 El servicio de anotación Hypothesis funciona por capas, o grupos. En general, podemos
 decir que sólo los miembros de un grupo pueden hacer anotaciones en ese grupo y ver las
-anotaciones (no privadas) que otros miembros hicieron en el grupo.
+anotaciones (no privadas) que otros miembros hagan en el grupo.
 
 Por defecto, todxs lxs usuarixs de Hypothesis somos miembros de un grupo mundial: el grupo
 "Público". Las anotaciones no privadas que hagamos ahí serán visibles para todos los
@@ -159,15 +158,16 @@ hayas terminado, hacé click en "Create group" (Crear grupo).
 
 ¡Felicidades! Acabás de crear tu primer grupo de anotación en Hypothesis.
 
-Ahora vamos a copiar el link a tu grupo. Este link lo vas a compartir con quienes quieras
+Ahora vamos a copiar el link de tu grupo. Este link lo vas a compartir con quienes quieras
 que se sumen al grupo. Los grupos no tienen contraseña, así que es muy importante que no
 compartas este link con nadie que no quieras que se sume al grupo.
 
 {:start="6"}
 6. Abajo a la derecha debería aparecer una sección "Invite new members" (Invitá nuevos
-miembros). Hacé click en el ícono del portapapeles para copiar el link a tu grupo. ¿No
-aparece la sección "Invite new members"? Capaz tu pantalla es un poco angosta, como la de
-un celular. Hacé clik en "More info" (Más información).
+miembros). Hacé click en el ícono del portapapeles para copiar el link de tu grupo. Lo vas a
+necesitar más adelante.
+¿No aparece la sección "Invite new members"? Capaz tu pantalla es un poco angosta, como la de
+un celular. En ese caso, hacé click en "More info" (Más información).
 
 <figure class="centered framed">
 	<img src="{{ site.baseurl }}/images/como-anotar-en-mis-clases/invitar.png"
@@ -175,14 +175,6 @@ un celular. Hacé clik en "More info" (Más información).
 	><br>
 	<em>Copiá el enlace de invitación a tu grupo</em>
 </figure>
-
-{:start="7"}
-7. Pegá el link acá abajo y hacé click en "Generar" para obtener un PDF personalizado 
-para enviar a tus alumnos con instrucciones para crearse una cuenta en Hypothesis, unirse a
-tu grupo de anotación e instrucciones para anotar.
-Este PDF incluye el link a tu grupo de anotación, así que recordá
-no compartirlo con nadie que no quieras que pueda sumarse al grupo. El PDF se genera
-en tu navegador, no se guardará ni enviará información sobre tu grupo, y permanecerá privado.
 
 ### 3. Elegí algo para anotar
 Ahora elegí el documento que querés anotar con tus alumnos.
@@ -192,8 +184,8 @@ Es decir, que puedas seleccionar partes para copiar y pegar. Si no, no van a pod
 También es posible anotar PDFs descargados, pero es un poco más complejo y no
 voy a ocuparme de esos casos en este artículo.
 
-Ahora copiá la URL del documento que elegiste; la vas a necesitar en la sección siguiente. La
-URL es la que aparece en la barra de direcciones de tu navegador.
+Ahora copiá la URL del documento que elegiste. La URL es la que aparece en la barra de direcciones
+de tu navegador.
 
 <figure class="centered">
 	<img src="{{ site.baseurl }}/images/como-anotar-en-mis-clases/barra-direcciones.png"
@@ -205,55 +197,79 @@ URL es la que aparece en la barra de direcciones de tu navegador.
 	</em>
 </figure>
 
+Pegá la URL del documento que elegiste y el enlace de tu grupo que obtuviste en la sección
+anterior en el formulario a continuación y hacé click en Generar para obtener el enlace
+a una versión anotable del documento que elegiste. 
+El enlace de grupo es opcional. Sirve para que la capa de tu grupo de anotación se abra
+automáticamente y evitar que tus alumnos anoten en el grupo equivocado por error.
+
+<form>
+	<p>
+		<label for="url">URL del documento:</label><br>
+		<input 
+			id="url" 
+			required="true"
+			placeholder="ej. https://anotacionweb.com/anotar-con-hypothesis/"
+		>
+	</p>
+	<p>
+		<label for="group">Link a tu grupo:</label><br>
+		<input 
+			id="group"
+			placeholder="ej. https://hypothes.is/groups/ZLx677oM/climate-feedback"
+			pattern="https://hypothes.is/groups/.{8}/.+"
+		>
+	</p>
+	<button type="submit" onclick="generate(event);">Generar</button>
+	<p>
+		<label for="annotable">URL anotable:</label><br>
+		<input
+			id="annotable"
+			disabled="true"
+		>
+	</p>
+</form>
+<script>
+	const generate = (event) => {
+		event.preventDefault();
+		let annotable = 'https://hyp.is/go?';
+		annotable += 'url=' + encodeURIComponent(event.target.form.querySelector('#url').value);
+		const group = event.target.form.querySelector('#group');
+		if (group.validity.valid) {
+			const groupid = group.value.split('/')[4];
+			annotable += '&group=' + groupid;
+		}
+		event.target.form.querySelector('#annotable').value = annotable
+	}
+</script>
+
 ### 4. Anotá con tus alumnos
-Hay dos formas de hacer esto.
-Una es instalando Hypothesis en tu navegador y el de estudiantes.
-Pro: Van a poder anotar todas las páginas que quieran.
-Contra: Tienen que instalar algo en el navegador, y es más difícil con celulares.
-Otra es haciendo una versión anotable de la página que elegiste.
-Pro: No tienen que instalar nada.
-Contra: Hay que hacer una versión anotable de cada página que quieran anotar.
+Envía a tus alumnos:
+- [Este PDF](/assets/anotacion-web-hypothesis-1-0.pdf) con con instrucciones para (1) crear una cuenta en Hypothesis, (2) unirse a
+un grupo de anotación, y (3) empezar a anotar.
+- El enlace al grupo de anotación que obtuviste al final de la parte 2.
+- El enlace a la versión anotable del documento que obtuviste al final de la parte 3.
 
-Capaz explicar que la primera opción es más fácil y rápida para empezar,
-pero que si van a estar anotando muchos documentos, se pueden pasar a la segunda
-más adelante.
+¡Listo! ¡Ya pueden empezar a anotar la web colaborativamente!
 
-#### 4.1 Sin instalar nada
-Ingresá la url de la página que querés anotar,
-y el link del grupo. (este campo asociado con el de arriba)
-Vas a obtener un nuevo enlace para compartir.
-Una versión anotable, con tu grupo por defecto.
-
-(ofrecer via -mejor bouncer-,
-explicar que la url del grupo la uso para que esa capa se despliegue por default
-)
-
-#### 4.2 Instalando la extensión
-
-##### 1. Instalá Hypothesis
-Instalá y pedí a tus alumnos que instalen Hypothesis en sus dispositivos
-Post aparte?
+### 4.1 Yapa
+Si van a estar anotando muchos documentos, quizá les convenga instalar Hypothesis
+en sus dispositivos para poder anotar cualquier documento web sin tener que generar
+una versión anotable:
 
 ###### Chrome y Firefox
-Chrome: ... 
-Firefox: ... (no oficial)
-Mostrar cómo activar
+Instalá la extensión para tu navegador Chrome o Firefox.
 
-###### Otro
-Otro: bookmarlet
-Mostrar como activar
+Para activar en el sitio que quieras anotar, hacé click en el botón de la extensión.
 
-###### Celu
-Celu: link anotación web
+###### Otros navegadores (Safari, Edge, etc)
+Arrastrá este [Bookmarklet Hypothesis][bookmarklet] a tu barra de marcadores, o hacé click derecho (control+click en Mac)
+para guardar en favoritos.
 
-##### 2. Mandales el link de la página para anotar
-Listo. Ahora sólo tenés que mandar el link de la página que querés anotar con ellos.
-Deberán seleccionar el grupo de anotación correcto, como se explica en el instructivo
-PDF.
-Si querés minimizar errores, escribí la URL abajo y el link a tu grupo para obtener
-un enlace para anotar en tu grupo de forma predeterminada!
-(qué pasa si tengo cliente cerrado y voy a una url con sufijo #annotations? caso
-extensiones y caso bookmarklet)
+Para activar en el sitio que quieras anotar, hacé click en el bookmarklet que guardaste.
 
-(la magia sería con hyp.is -bouncer-, pero no anda con Firefox)
+[bookmarklet]: javascript:(function(){window.hypothesisConfig=function(){return{showHighlights:true,appType:'bookmarklet'};};var d=document,s=d.createElement('script');s.setAttribute('src','https://hypothes.is/embed.js');d.body.appendChild(s)})();
 
+###### Celular
+Consultá el artículo [Un truco para anotar con Hypothesis en el celular](truco-anotar-hypothesis-celular)
+en este mismo blog.
