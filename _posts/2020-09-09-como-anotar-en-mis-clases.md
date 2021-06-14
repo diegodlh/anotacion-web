@@ -16,6 +16,7 @@ y cómo hacerlo usando Hypothesis.
 	- [1. Hacete una cuenta en Hypothesis](#1-hacete-una-cuenta-en-hypothesis)
 	- [2. Creá un grupo para tu clase](#2-creá-un-grupo-para-tu-clase)
 	- [3. Elegí un documento](#3-elegí-un-documento)
+	- [4. Yapa](#4-yapa)
 
 ## Introducción
 
@@ -187,9 +188,19 @@ Es decir, que puedas seleccionar partes para copiar y pegar. Si no, no van a pod
 También es posible anotar PDFs descargados, pero es un poco más complejo y no
 voy a ocuparme de esos casos en este artículo.
 
+**Actualización 14 jun 21:** Lamentablemente, ya
+<a href="https://web.hypothes.is/blog/why-we-no-longer-run-an-open-proxy/" target="_blank">no es posible</a>
+obtener una *versión anotable* para la mayoría de las páginas web o PDFs online.
+Es probable que los pasos a continuación no funcionen con el documento que elegiste.
+Seguir los pasos en la sección [*Yapa*](#4-yapa) para instalar Hypothesis
+y anotar cualquier documento web sin tener que generar una versión anotable previamente.
+
+{:transparent: style="opacity:.3"}
 Para obtener una versión anotable del documento que elegiste:
+{: transparent}
 1. Copiá la URL del documento. La URL es la que aparece en la barra de direcciones
 de tu navegador.
+{: transparent}
 
 <figure class="centered">
 	<img src="{{ site.baseurl }}/images/como-anotar-en-mis-clases/barra-direcciones.png"
@@ -200,6 +211,7 @@ de tu navegador.
 		La URL del documento que elegiste está ahí. Copiala.
 	</em>
 </figure>
+{: transparent}
 
 {:start="2"}
 2. Pegá la URL del documento en el formulario a continuación.
@@ -208,6 +220,7 @@ Este paso es opcional y sirve para que la capa de anotaciones de tu grupo se abr
 en la versión anotable del documento que vamos a generar. Esto ayuda a evitar
 que tus alumnxs anoten en un grupo equivocado por error, pero no es necesario.
 4. Hacé click en "Generar" para obtener el enlace a una versión anotable del documento que elegiste.
+{: transparent}
 
 <form>
 	<p>
@@ -235,6 +248,7 @@ que tus alumnxs anoten en un grupo equivocado por error, pero no es necesario.
 		>
 	</p>
 </form>
+{: transparent}
 <script>
 	const via = (url, group) => {
 		// using via
@@ -276,8 +290,10 @@ que tus alumnxs anoten en un grupo equivocado por error, pero no es necesario.
 *Nota: el formulario usa JavaScript. Si tenés problemas para obtener el enlace, podés
 obtener uno similar copiando la URL del documento que elegiste
 <a href="https://via.hypothes.is/" target="_blank">acá</a>.*
+{: transparent}
 
 ¡Listo! ¡Ya pueden empezar a anotar la web colaborativamente!
+{: transparent}
 
 ### 4 Yapa
 Si van a estar anotando muchos documentos, quizá les convenga instalar Hypothesis
