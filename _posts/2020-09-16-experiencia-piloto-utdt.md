@@ -163,7 +163,7 @@ la mayoría (5 de 7) consideró que las anotaciones le ayudaron a escribir la re
 
 Finalmente, en el actual contexto de pandemia y clases virtuales, cabe destacar que
 si bien sólo algunos (3 de 7) consideraron que la actividad fue una carga extra, la mayoría (6 de 7)
-sitió que le ayudó a **recuperar parte de la dinámica grupal del aula**.
+sintió que le ayudó a **recuperar parte de la dinámica grupal del aula**.
 
 #### Servicio público vs integración LMS
 Como se indicó más arriba, en la actividad 1 usamos la integración de Hypothesis con
